@@ -1,37 +1,151 @@
 @import 'custom';
 @import '../node_modules/bootstrap/scss/bootstrap';
 
+
+/*.logo {
+  padding: 1em;
+  img {
+    width: 100%;
+    height: auto;
+  }
+}*/
+/* ------ NAV -------- */
+.navbar-toggler {
+  border: 0px;
+}
+.navbar-toggler-icon {
+  float: right;
+}
+.collapse navbar-collapse {
+  top:0px;
+}
+
+#background img {
+  width: 100%;
+}
+.logo {
+  float: left;
+}
+/* Move down content because we have a fixed navbar that is 50px tall */
 body {
-  padding: 2rem 0;
+  padding: 2rem;
+  background-color: white;
 }
-
-// Responsive typography sizes using Bootstrap mixins for the media querries
-html {
-  font-size: 14px;
+/* --------------- HOME - Services ------------------*/
+.services {
+  background-color: #86abaf;
 }
-
-@include media-breakpoint-up(sm) {
-  html {
-    font-size: 16px;
+.services, .row {
+  padding: 3em;
+    img {
+  width: 100%;
+  height: auto;
   }
 }
+.row, .col-md-4 {
+  padding: 5%;
+}
+.btn-secondary {
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #a6cb41;
+}
+/* --------------- HOME - Locations ------------------*/
+.locations .pin {
+  width: 40%;
+  padding: 5%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.locations {
+  text-align: center;
+}
+/* --------------------- HOME - About --------------------- */
+.centered {
+    text-align: center;
+}
+/* ---------------- HOME - Contact ----------------------- */
+.contact_us {
+  text-align: center;
+}
+.contacts {
+  background-color: #a6cb41;
+  width: 100%;
+  height: 200%;
+  padding: 0;
+  border: 2px solid #000;
+}
+label, input, #subject {
+  width: 100%;
+}
+#location_option {
+  border: 1px solid #000;
+}
+form {
+  padding: 5%;
+}
+.submit {
+  border: 1px solid #000;
+}
+label, input {
+  border: none;
+}
+/* ----------------- Top Button ----------------- */
 
-@include media-breakpoint-up(md) {
-  html {
-    font-size: 20px;
-  }
+/* -------------------- hr ---------------- */
+hr {
+  border: 0.5px solid #000;
+}
+/* ------------- SERVICES PAGE ----------------- */
+#specialties th {
+    text-align: left;
+    background-color: #a6cb41;
+    color: white;
+}
+#specialties td, #specialties th {
+    border: 1px solid #3e3e3e;
+    width: 100%;
 }
 
-@include media-breakpoint-up(lg) {
-  html {
-    font-size: 28px;
-  }
+/* ------------------------ LOCATION PAGE ----------------- */
+#maps img {
+  width: 35%;
+  margin-top: -35%;
+}
+.kanata, .stittsville, .morgans {
+  float: right;
+  top: 0;
 }
 
-.header-subtle {
-  @extend .text-warning;
-  @extend .text-uppercase;
-  font-size: 1.2rem;
-  letter-spacing: .12em;
-  opacity: .6;
+/* --------------------- MEDIA QUERY ----------------------------- */
+
+@media only screen and (min-width: 500px) {
+/* -- HOME nav -- */
+  #background img {
+    height: 450px;
+  }
+  .logo {
+    width: 300%;
+  }
+  .btn-secondary {
+    height: 40px;
+    width:40%;
+  }
+  .col-md-4, .row {
+    display: inline-block;
+    text-align: center;
+      img {
+        width: 50%;
+      }
+  }
+  /* -- locations -- */
+  .locations .pin {
+    width: 20%;
+      display: inline-block;
+  }
+  /* -- location page -- */
+  #maps img {
+    width: 20%;
+    margin-top: -15%;
+  }
 }
